@@ -1,34 +1,238 @@
 body {
-       margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #121212;
-    }
-
-    model-viewer {
-      width: 90vw;
-      height: 90vh;
-      background-color: #121212;
-    }
-
- .heading {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  text-align: center;
-  font-size: 3rem;
-  font-family: 'Georgia', serif;
-  color: #C0C0C0; 
-  text-shadow: 
-    0 0 5px #999999,
-    0 0 10px #000000,
-    0 0 15px #ffffff;
-  letter-spacing: 3px;
-  font-weight: bold;
-  z-index: 10;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: radial-gradient(#05070c, #000000);
+  font-family: 'Segoe UI', sans-serif;
+  color: #f0f0f0;
+  overflow-x: hidden;
 }
+
+
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid #00f0ff50;
+  border-radius: 12px;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff80;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #00f0ff;
+  transition: width 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00f0ff;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #00f0ff;
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 180px;
+    gap: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+.left-content {
+  max-width: 40%;
+  z-index: 2;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  text-shadow:
+    0 0 10px rgba(0, 255, 255, 0.6),
+    0 0 20px rgba(0, 255, 255, 0.4);
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-size: 2.5rem;
+  color: #00f6ff;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+  margin-bottom: 30px;
+}
+
+.enquire-btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  color: #00f6ff;
+  background: transparent;
+  border: 2px solid #00f6ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #00f6ff88;
+}
+
+.enquire-btn:hover {
+  background-color: #00f6ff;
+  color: #000000;
+  box-shadow: 0 0 20px #00f6ff;
+}
+
+model-viewer {
+  width: 50vw;
+  height: 80vh;
+  background-color: transparent;
+}
+
+
+/* ---------- RESPONSIVE STYLES ---------- */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .left-content {
+    max-width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .heading {
+    font-size: 2.8rem;
+  }
+
+  .subheading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .enquire-btn {
+    font-size: 0.95rem;
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .subheading {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .enquire-btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+
+  model-viewer {
+    width: 95vw;
+    height: 50vh;
+  }
+}
+
 
 
