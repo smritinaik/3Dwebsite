@@ -153,6 +153,7 @@ body {
 }
 
 .enquire-btn {
+  border-radius: 35px;
   padding: 12px 30px;
   font-size: 1rem;
   color: #00f6ff;
@@ -234,6 +235,3 @@ model-viewer {
     height: 50vh;
   }
 }
-
-
-
