@@ -8,6 +8,8 @@ body {
   overflow-x: hidden;
 }
 
+/* -------------------------------------------------------------------------- */
+
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -103,7 +105,8 @@ body {
   }
 }
 
-/* ------------ */
+
+/* ---------------------------------------------------------------------- */
 
 
 
@@ -173,7 +176,7 @@ model-viewer {
   background-color: transparent;
 }
 
-/* ------------ */
+/* ------- */
 
 /* ---------- RESPONSIVE STYLES ---------- */
 @media (max-width: 768px) {
@@ -234,13 +237,36 @@ model-viewer {
 }
 
 
-/* cards */
+
+/* ----------------------------------------------------------------------- */
+
+
+
+/* CARDS */
+
+/* cards heading */
+.card-heading {
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: -20px;
+}
+
+.card-text {
+  font-size: 2.8rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+/* -- */
+
 .card-section {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
   padding: 60px 5%;
-  background-color: #0b0b0b;
+  background-color: #050505;
 }
 
 .card {
@@ -258,8 +284,8 @@ model-viewer {
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+  transform: translateY(-60px);
+  box-shadow: 0 0 25px rgba(255, 207, 48, 0.4);
 }
 
 .card model-viewer {
@@ -295,4 +321,8 @@ model-viewer {
   }
 }
 
-/* ------ */
+
+/* ---------------------------------------------------------------------- */
+
+
+
