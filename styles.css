@@ -79,7 +79,7 @@ body {
   cursor: pointer;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive for nav */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
@@ -103,6 +103,11 @@ body {
   }
 }
 
+/* ------------ */
+
+
+
+/* hero */
 .container {
   display: flex;
   align-items: center;
@@ -167,6 +172,8 @@ model-viewer {
   height: 80vh;
   background-color: transparent;
 }
+
+/* ------------ */
 
 /* ---------- RESPONSIVE STYLES ---------- */
 @media (max-width: 768px) {
