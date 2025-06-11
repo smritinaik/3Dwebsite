@@ -259,6 +259,7 @@ model-viewer {
   font-weight: 600;
   letter-spacing: 2px;
 }
+
 /* -- */
 
 .card-section {
@@ -319,10 +320,12 @@ model-viewer {
   .card {
     max-width: 90%;
   }
+
+  .card:hover {
+    transform: translateY(-20spx);
+    box-shadow: 0 0 25px rgba(255, 207, 48, 0.4);
+  }
 }
 
 
 /* ---------------------------------------------------------------------- */
-
-
-
