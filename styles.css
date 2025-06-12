@@ -132,17 +132,9 @@ body {
   text-shadow:
     0 0 10px #d4af37cc,
     0 0 20px #d4af3770;
-  letter-spacing: 3px;
-  padding-top: 40px;
-  margin-bottom: 10px;
-}
-
-.subheading {
-  font-size: 2.5rem;
-  color: #d4af37;
-  font-weight: 500;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
+  letter-spacing: 3.5px;
+  padding-top: 10px;
+  margin-bottom: 5px;
 }
 
 .description {
@@ -154,7 +146,7 @@ body {
 
 .enquire-btn {
   border-radius: 35px;
-  padding: 12px 30px;
+  padding: 8px 30px;
   font-size: 1rem;
   color: #d4af37;
   background: transparent;
@@ -181,16 +173,22 @@ model-viewer {
 /* ---------- RESPONSIVE STYLES ---------- */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
+    flex-direction: column-reverse; /*  This flips the order */
     justify-content: flex-start;
     align-items: center;
     padding-top: 40px;
   }
 
+  model-viewer {
+    width: 95vw;
+    height: 50vh;
+    
+  }
+
   .left-content {
     max-width: 90%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
   }
 
   .heading {
@@ -211,6 +209,7 @@ model-viewer {
     padding: 10px 25px;
   }
 }
+/* ------------- */
 
 @media (max-width: 480px) {
   .heading {
@@ -235,7 +234,7 @@ model-viewer {
     height: 50vh;
   }
 }
-
+/* --------- */
 
 
 /* ----------------------------------------------------------------------- */
