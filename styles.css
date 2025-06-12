@@ -322,7 +322,7 @@ model-viewer {
   }
 
   .card:hover {
-    transform: translateY(-20spx);
+    transform: translateY(-20px);
     box-shadow: 0 0 25px rgba(255, 207, 48, 0.4);
   }
 }
